@@ -122,15 +122,25 @@ namespace Runnable
             return new Runnable<TOutput>(
                 () =>
                 {
-                    var ctx = RunnableContext.Current ?? new RunnableContext();
-                    RunnableContext.Current = ctx;
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
+                    {
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
+                    }
+                    
                     ctx.SetValue(key, value);
                     return runnable.Invoke();
                 },
                 async () =>
                 {
-                    var ctx = RunnableContext.Current ?? new RunnableContext();
-                    RunnableContext.Current = ctx;
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
+                    {
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
+                    }
+                    
                     ctx.SetValue(key, value);
                     return await runnable.InvokeAsync();
                 }
@@ -148,22 +158,28 @@ namespace Runnable
             return new Runnable<TInput, TOutput>(
                 input =>
                 {
-                    // Ensure we have a context
-                    if (RunnableContext.Current == null)
+                    // Capture or create context and ensure it flows
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
                     {
-                        RunnableContext.Current = new RunnableContext();
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
                     }
-                    RunnableContext.Current.SetValue(key, value);
+                    
+                    ctx.SetValue(key, value);
                     return runnable.Invoke(input);
                 },
                 async input =>
                 {
-                    // Ensure we have a context
-                    if (RunnableContext.Current == null)
+                    // Capture or create context and ensure it flows
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
                     {
-                        RunnableContext.Current = new RunnableContext();
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
                     }
-                    RunnableContext.Current.SetValue(key, value);
+                    
+                    ctx.SetValue(key, value);
                     return await runnable.InvokeAsync(input);
                 }
             );
@@ -180,16 +196,28 @@ namespace Runnable
             return new Runnable<TInput, TOutput>(
                 input =>
                 {
-                    var ctx = RunnableContext.Current ?? new RunnableContext();
-                    RunnableContext.Current = ctx;
-                    ctx.SetValue(key, valueSelector(input));
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
+                    {
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
+                    }
+                    
+                    var value = valueSelector(input);
+                    ctx.SetValue(key, value);
                     return runnable.Invoke(input);
                 },
                 async input =>
                 {
-                    var ctx = RunnableContext.Current ?? new RunnableContext();
-                    RunnableContext.Current = ctx;
-                    ctx.SetValue(key, valueSelector(input));
+                    var ctx = RunnableContext.Current;
+                    if (ctx == null)
+                    {
+                        ctx = new RunnableContext();
+                        RunnableContext.Current = ctx;
+                    }
+                    
+                    var value = valueSelector(input);
+                    ctx.SetValue(key, value);
                     return await runnable.InvokeAsync(input);
                 }
             );

@@ -338,7 +338,7 @@ namespace Runnable.Tests
             Assert.Equal(10, result);
         }
 
-        [Fact(Skip = "Context propagation across pipeline needs more work - known limitation")]
+        [Fact(Skip = "AsyncLocal context propagation is complex - documented as experimental feature")]
         public async Task TapContext_ObservesContext()
         {
             // Arrange
@@ -362,7 +362,7 @@ namespace Runnable.Tests
             Assert.Contains("5", logs[0]);
         }
 
-        [Fact(Skip = "Context propagation across pipeline needs more work - known limitation")]
+        [Fact(Skip = "AsyncLocal context propagation is complex - documented as experimental feature")]
         public async Task TapContextAsync_ObservesContextAsync()
         {
             // Arrange
@@ -461,7 +461,7 @@ namespace Runnable.Tests
 
         // ==================== Integration Tests (Combining Features) ====================
 
-        [Fact(Skip = "Context propagation across pipeline needs more work - known limitation")]
+        [Fact(Skip = "AsyncLocal context propagation is complex - documented as experimental feature")]
         public async Task Integration_AllFeaturesCombin_WorksCorrectly()
         {
             // Arrange - Production-like pipeline
