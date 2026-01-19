@@ -19,7 +19,7 @@
 - ?? **A/B Testing** - Built-in experimentation and feature flags
 - ?? **.NET Standard 2.0+** - Compatible with .NET 5, 6, 8, 9, 10
 
-## ?? Installation## ?? Installation
+## ?? Installation
 
 ```bash
 dotnet add package Runnable
