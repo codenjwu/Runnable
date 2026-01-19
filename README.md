@@ -1,4 +1,4 @@
-# Runnable ??
+﻿# Runnable 🚀
 
 [![.NET](https://img.shields.io/badge/.NET-5%2C6%2C8%2C9%2C10-512BD4)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-14.0-239120)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -6,26 +6,26 @@
 
 **Runnable** is a powerful, composable pipeline library for .NET inspired by LangChain's LCEL (LangChain Expression Language). Build sophisticated data processing pipelines with a clean, functional API that supports multi-tenancy, distributed tracing, caching, and resilience patterns.
 
-## ? Features
+## ✨ Features
 
-- ?? **Composable Pipelines** - Chain operations with fluent API
-- ?? **Multi-Tenant Support** - Built-in tenant, user, and correlation ID tracking
-- ? **Context-Aware Operations** - Map, filter, branch, and cache based on execution context
-- ?? **Retry & Resilience** - Exponential backoff, circuit breaker, timeout support
-- ?? **Advanced Caching** - Per-tenant/user caching with TTL and LRU eviction
-- ?? **Distributed Tracing** - Correlation IDs and trace propagation
-- ?? **Type-Safe** - Full generic support for 0-16 parameters
-- ?? **Async-First** - Native async/await support throughout
-- ?? **A/B Testing** - Built-in experimentation and feature flags
-- ?? **.NET Standard 2.0+** - Compatible with .NET 5, 6, 8, 9, 10
+- 🔗 **Composable Pipelines** - Chain operations with fluent API
+- 🏢 **Multi-Tenant Support** - Built-in tenant, user, and correlation ID tracking
+- ⚡ **Context-Aware Operations** - Map, filter, branch, and cache based on execution context
+- 🔄 **Retry & Resilience** - Exponential backoff, circuit breaker, timeout support
+- 💾 **Advanced Caching** - Per-tenant/user caching with TTL and LRU eviction
+- 📊 **Distributed Tracing** - Correlation IDs and trace propagation
+- 🎯 **Type-Safe** - Full generic support for 0-16 parameters
+- ⚙️ **Async-First** - Native async/await support throughout
+- 🧪 **A/B Testing** - Built-in experimentation and feature flags
+- 📦 **.NET Standard 2.0+** - Compatible with .NET 5, 6, 8, 9, 10
 
-## ?? Installation
+## 📦 Installation
 
 ```bash
 dotnet add package Runnable
 ```
 
-## ?? Quick Start
+## 🚀 Quick Start
 
 ### Basic Pipeline
 
@@ -65,7 +65,7 @@ var processor = RunnableLambda.Create<Order, Order>(order => order)
     );
 ```
 
-## ?? Multi-Tenant & Context-Aware Pipelines
+## 🏢 Multi-Tenant & Context-Aware Pipelines
 
 Runnable provides powerful context-aware operations perfect for multi-tenant SaaS applications:
 
@@ -117,7 +117,7 @@ var pipeline = productionHandler
     .BranchByDebugMode(debugHandler);
 ```
 
-### Per-Tenant Caching ??
+### Per-Tenant Caching 🔥
 
 ```csharp
 // Each tenant gets isolated cache
@@ -139,7 +139,7 @@ var analytics = getAnalytics
         maxSize: 500);
 ```
 
-## ?? Real-World Example
+## 🎯 Real-World Example
 
 ### Complete Multi-Tenant SaaS Pipeline
 
@@ -190,7 +190,7 @@ var pipeline = apiService
 var result = await pipeline.InvokeAsync(request);
 ```
 
-## ?? Core Concepts
+## 📚 Core Concepts
 
 ### Runnable Types
 
@@ -246,7 +246,7 @@ var result = await pipeline.InvokeAsync(request);
 - `.WithTenant(tenantId)` - Set tenant context
 - `.WithUser(userId)` - Set user context
 
-## ?? Advanced Patterns
+## 🎨 Advanced Patterns
 
 ### Parallel Processing
 
@@ -299,7 +299,7 @@ var cached = service
         input => input.Id.ToString());
 ```
 
-## ?? Configuration
+## 🔧 Configuration
 
 ### Context Configuration
 
@@ -328,7 +328,7 @@ var pipeline = service
         }));
 ```
 
-## ?? Testing
+## 🧪 Testing
 
 ```csharp
 [Test]
@@ -352,7 +352,7 @@ public async Task TestPipelineWithContext()
 }
 ```
 
-## ?? API Reference
+## 📖 API Reference
 
 ### Context Properties
 
@@ -373,42 +373,42 @@ public async Task TestPipelineWithContext()
 | `Clear()` | Clear all context data |
 | `GetAllData()` | Get all context as dictionary |
 
-## ?? Why Runnable?
+## 🌟 Why Runnable?
 
-### ? Type-Safe
+### ✅ Type-Safe
 Full IntelliSense support with generic types throughout
 
-### ? Composable
+### ✅ Composable
 Build complex pipelines from simple, reusable components
 
-### ? Multi-Tenant Ready
+### ✅ Multi-Tenant Ready
 Built-in tenant isolation and context propagation
 
-### ? Production-Ready
+### ✅ Production-Ready
 Retry logic, caching, timeouts, and circuit breakers included
 
-### ? Testable
+### ✅ Testable
 Easy to mock and test individual pipeline stages
 
-### ? Performant
+### ✅ Performant
 Async-first design with efficient caching and LRU eviction
 
-## ?? Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ?? License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ?? Acknowledgments
+## 🙏 Acknowledgments
 
 Inspired by:
 - [LangChain](https://www.langchain.com/) - The original LCEL concept
 - Functional programming principles
 - Railway-oriented programming
 
-## ?? More Examples
+## 📚 More Examples
 
 Check out the [examples](examples/) directory for more detailed examples:
 - Multi-tenant API processing
@@ -417,12 +417,12 @@ Check out the [examples](examples/) directory for more detailed examples:
 - Custom caching strategies
 - Distributed tracing setup
 
-## ?? Support
+## 💬 Support
 
-- ?? [Documentation](https://github.com/codenjwu/Runnable/wiki)
-- ?? [Issue Tracker](https://github.com/codenjwu/Runnable/issues)
-- ?? [Discussions](https://github.com/codenjwu/Runnable/discussions)
+- 📖 [Documentation](https://github.com/codenjwu/Runnable/wiki)
+- 🐛 [Issue Tracker](https://github.com/codenjwu/Runnable/issues)
+- 💡 [Discussions](https://github.com/codenjwu/Runnable/discussions)
 
 ---
 
-**Built with ?? for the .NET community**
+**Built with ❤️ for the .NET community**
