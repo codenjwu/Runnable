@@ -9,7 +9,22 @@ namespace Runnable
         // ==================== Memoization/Caching ====================
 
         /// <summary>
-        /// Cache the results of a runnable (1 input version)
+        /// Cache the results of a runnable (1 input version).
+        /// 
+        /// IMPORTANT: Cache Boundaries
+        /// - The cache only stores the OUTPUT of THIS runnable, not the entire pipeline
+        /// - Extensions added AFTER .WithCache() will still execute (e.g., .Map(), .TapAsync(), .Pipe())
+        /// - Extensions added BEFORE .WithCache() benefit from caching (e.g., .WithRetry(), expensive operations)
+        /// 
+        /// Example:
+        ///   expensive.WithCache().Pipe(transform)  
+        ///   ↑ Caches 'expensive' results, but 'transform' always executes
+        /// 
+        ///   expensive.Pipe(transform).WithCache()  
+        ///   ↑ Caches the entire pipeline result (expensive + transform)
+        /// 
+        /// Thread Safety: This cache is thread-safe and uses locking for concurrent access.
+        /// Memory: Cache entries never expire and grow indefinitely. Consider using WithCache with expiration for long-running services.
         /// </summary>
         public static Runnable<TInput, TOutput> WithCache<TInput, TOutput>(
             this IRunnable<TInput, TOutput> runnable)
