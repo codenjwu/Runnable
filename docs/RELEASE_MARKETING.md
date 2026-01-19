@@ -1,20 +1,20 @@
-# Runnable - Release Marketing Materials ??
+﻿# Runnable - Release Marketing Materials 🚀
 
-## ?? GitHub Repository Description (280 chars max)
+## 📝 GitHub Repository Description (280 chars max)
 
 ```
-?? LangChain-inspired composable pipelines for .NET with first-class multi-tenancy support. 
+🚀 LangChain-inspired composable pipelines for .NET with first-class multi-tenancy support. 
 Build type-safe data pipelines with context-aware caching, tenant isolation, A/B testing, 
-and resilience patterns. Perfect for SaaS applications! ??
+and resilience patterns. Perfect for SaaS applications! 🔥
 ```
 
-## ?? Short Tagline
+## 🎯 Short Tagline
 
 **"LangChain meets .NET Multi-Tenancy - Composable pipelines that actually understand your tenants"**
 
 ---
 
-## ?? NuGet Package Description
+## 📦 NuGet Package Description
 
 ### Title
 **Runnable - Composable Pipelines with Multi-Tenant Magic**
@@ -28,19 +28,19 @@ LangChain-inspired pipeline library for .NET with first-class multi-tenancy. Bui
 ### Full Description
 
 ```markdown
-# Runnable ??
+# Runnable 🚀
 
 Build beautiful, composable data pipelines with **automatic multi-tenant isolation** and **context-aware operations**.
 
-## ? What Makes It Special
+## ✨ What Makes It Special
 
-- ?? **Multi-Tenancy First** - Per-tenant caching, routing, and isolation built-in
-- ?? **Fluent Composition** - Chain operations like LINQ, but better
-- ? **Context Flows Everywhere** - Tenant ID, User ID, Correlation ID propagate automatically
-- ?? **Type-Safe** - Full IntelliSense for 0-16 parameters
-- ?? **Production-Ready** - Retry, timeout, circuit breaker, caching with TTL+LRU
+- 🏢 **Multi-Tenancy First** - Per-tenant caching, routing, and isolation built-in
+- 🔗 **Fluent Composition** - Chain operations like LINQ, but better
+- ⚡ **Context Flows Everywhere** - Tenant ID, User ID, Correlation ID propagate automatically
+- 🎯 **Type-Safe** - Full IntelliSense for 0-16 parameters
+- 🔥 **Production-Ready** - Retry, timeout, circuit breaker, caching with TTL+LRU
 
-## ?? Quick Example
+## 🎬 Quick Example
 
 ```csharp
 // Multi-tenant API pipeline in 15 lines!
@@ -64,31 +64,31 @@ var pipeline = apiService
 var result = await pipeline.InvokeAsync(request);
 ```
 
-## ?? Perfect For
+## 🎯 Perfect For
 
-- ? Multi-tenant SaaS applications
-- ? Microservices with distributed tracing
-- ? Data processing pipelines
-- ? API gateways and middleware
-- ? A/B testing and feature flags
+- ✅ Multi-tenant SaaS applications
+- ✅ Microservices with distributed tracing
+- ✅ Data processing pipelines
+- ✅ API gateways and middleware
+- ✅ A/B testing and feature flags
 
-**Made with ?? for the .NET community**
+**Made with ❤️ for the .NET community**
 ```
 
 ---
 
-## ?? Twitter/X Announcement Thread
+## 🐦 Twitter/X Announcement Thread
 
 ### Tweet 1 (Main Announcement)
 ```
-?? Excited to release Runnable - LangChain-inspired pipelines for .NET with FIRST-CLASS multi-tenancy!
+🚀 Excited to release Runnable - LangChain-inspired pipelines for .NET with FIRST-CLASS multi-tenancy!
 
 Build composable data pipelines where context (tenant, user, correlation ID) flows automatically.
 
-Perfect for SaaS apps! ??
+Perfect for SaaS apps! 🔥
 
-?? https://nuget.org/packages/Runnable
-? https://github.com/codenjwu/Runnable
+📦 https://nuget.org/packages/Runnable
+⭐ https://github.com/codenjwu/Runnable
 
 #dotnet #csharp #saas
 ```
@@ -104,7 +104,7 @@ var data = expensiveOperation
     .Invoke(request);
 ```
 
-Each tenant gets isolated cache automatically! No more cross-tenant contamination ??
+Each tenant gets isolated cache automatically! No more cross-tenant contamination 🎯
 
 #dotnet
 ```
@@ -119,8 +119,8 @@ var handler = defaultHandler
     .BranchByTenant("enterprise", enterpriseHandler);
 ```
 
-Premium customers get the fast lane ???
-Free users get... the scenic route ??
+Premium customers get the fast lane 🏎️
+Free users get... the scenic route 🚶
 
 #SaaS #dotnet
 ```
@@ -140,58 +140,58 @@ service
         enrich(x, ctx));
 ```
 
-Never lose your context again! ??
+Never lose your context again! 🧭
 ```
 
 ### Tweet 5 (Call to Action)
 ```
 Built for modern .NET (Standard 2.0, 5, 6, 8, 9, 10)
 
-? 500+ extension methods
-? 0-16 parameter support
-? Full async/await
-? Production-tested
-? MIT licensed
+✅ 500+ extension methods
+✅ 0-16 parameter support
+✅ Full async/await
+✅ Production-tested
+✅ MIT licensed
 
-Try it today! ? the repo if you like it!
+Try it today! ⭐ the repo if you like it!
 
-?? https://nuget.org/packages/Runnable
+📦 https://nuget.org/packages/Runnable
 ```
 
 ---
 
-## ?? LinkedIn Announcement
+## 💼 LinkedIn Announcement
 
 ### Professional Post
 
 ```
-?? Excited to announce the release of Runnable - a composable pipeline library for .NET!
+🚀 Excited to announce the release of Runnable - a composable pipeline library for .NET!
 
 After months of development, I'm thrilled to share a library that solves a real problem I've faced in every multi-tenant SaaS application I've built: managing tenant context and isolation across complex data pipelines.
 
-?? What is Runnable?
+🎯 What is Runnable?
 
 Inspired by LangChain's LCEL, Runnable brings functional pipeline composition to .NET with first-class multi-tenancy support. Think LINQ meets microservices middleware, but with automatic context propagation.
 
-? Key Features:
+✨ Key Features:
 
-?? Multi-Tenant First
-  �� Per-tenant cache isolation
-  �� Automatic tenant routing
-  �� Built-in security filtering
+🏢 Multi-Tenant First
+  → Per-tenant cache isolation
+  → Automatic tenant routing
+  → Built-in security filtering
 
-? Context-Aware Operations
-  �� Tenant ID, User ID, Correlation ID flow automatically
-  �� No more passing context manually
-  �� Clean, readable code
+⚡ Context-Aware Operations
+  → Tenant ID, User ID, Correlation ID flow automatically
+  → No more passing context manually
+  → Clean, readable code
 
-?? Production-Ready
-  �� Exponential backoff retry
-  �� Circuit breaker pattern
-  �� TTL + LRU caching
-  �� Distributed tracing
+🔧 Production-Ready
+  → Exponential backoff retry
+  → Circuit breaker pattern
+  → TTL + LRU caching
+  → Distributed tracing
 
-?? Example:
+💻 Example:
 
 ```csharp
 var pipeline = apiService
@@ -208,14 +208,14 @@ var pipeline = apiService
 var result = await pipeline.InvokeAsync(request);
 ```
 
-?? Perfect for:
-  ? Multi-tenant SaaS applications
-  ? Microservices architectures
-  ? Data processing pipelines
-  ? API gateways
+🎓 Perfect for:
+  • Multi-tenant SaaS applications
+  • Microservices architectures
+  • Data processing pipelines
+  • API gateways
 
-?? Available now on NuGet
-? Open source (MIT) on GitHub
+📦 Available now on NuGet
+⭐ Open source (MIT) on GitHub
 
 I'd love to hear your thoughts! What challenges do you face with multi-tenant architectures?
 
@@ -224,29 +224,29 @@ I'd love to hear your thoughts! What challenges do you face with multi-tenant ar
 
 ---
 
-## ?? Reddit Post (r/dotnet, r/csharp)
+## 📱 Reddit Post (r/dotnet, r/csharp)
 
 ### Title
 ```
-[Open Source] Runnable - LangChain-inspired pipelines for .NET with first-class multi-tenancy support ??
+[Open Source] Runnable - LangChain-inspired pipelines for .NET with first-class multi-tenancy support 🚀
 ```
 
 ### Body
 ```markdown
-Hey r/dotnet! ??
+Hey r/dotnet! 👋
 
 I'm excited to share a library I've been working on that solves a problem I've faced in every multi-tenant SaaS app: **managing tenant context across complex pipelines**.
 
-## ?? What is Runnable?
+## 🎯 What is Runnable?
 
 Think **LangChain's LCEL** meets **.NET multi-tenancy**. Build composable data pipelines where context (tenant ID, user ID, correlation ID) flows automatically through every operation.
 
-## ?? The Problem It Solves
+## 🔥 The Problem It Solves
 
 Ever written code like this?
 
 ```csharp
-// Bad: Manual context passing everywhere ??
+// Bad: Manual context passing everywhere 😢
 var data = await GetData(request, tenantId, userId, correlationId);
 var filtered = FilterByTenant(data, tenantId);
 var cached = GetFromCache(filtered, tenantId);
@@ -256,7 +256,7 @@ var enriched = Enrich(cached, tenantId, userId);
 **Runnable makes it beautiful:**
 
 ```csharp
-// Good: Context flows automatically ?
+// Good: Context flows automatically ✨
 var result = await service
     .GetData()
     .WithTenant(request.TenantId)
@@ -266,7 +266,7 @@ var result = await service
     .InvokeAsync(request);
 ```
 
-## ?? Real-World Example
+## 🎬 Real-World Example
 
 Here's a complete multi-tenant API pipeline:
 
@@ -304,17 +304,17 @@ var pipeline = apiService
 var result = await pipeline.InvokeAsync(request);
 ```
 
-## ? Cool Features
+## ✨ Cool Features
 
-- ?? **Per-Tenant Caching**: Each tenant gets isolated cache
-- ?? **Type-Safe**: Full IntelliSense for 0-16 parameters
-- ? **Async-First**: Native async/await throughout
-- ?? **Smart Routing**: Branch by tenant, user, or custom context
-- ?? **A/B Testing**: Built-in feature flag support
-- ?? **Resilience**: Retry, timeout, circuit breaker patterns
-- ?? **Observability**: Distributed tracing, correlation IDs
+- 🏢 **Per-Tenant Caching**: Each tenant gets isolated cache
+- 🎯 **Type-Safe**: Full IntelliSense for 0-16 parameters
+- ⚡ **Async-First**: Native async/await throughout
+- 🔀 **Smart Routing**: Branch by tenant, user, or custom context
+- 🧪 **A/B Testing**: Built-in feature flag support
+- 🔄 **Resilience**: Retry, timeout, circuit breaker patterns
+- 📊 **Observability**: Distributed tracing, correlation IDs
 
-## ?? Why I Built This
+## 🎯 Why I Built This
 
 I was tired of:
 1. Passing context manually through every method
@@ -324,7 +324,7 @@ I was tired of:
 
 **Runnable gives you all this out-of-the-box.**
 
-## ?? Getting Started
+## 📦 Getting Started
 
 ```bash
 dotnet add package Runnable
@@ -341,13 +341,13 @@ var result = RunnableLambda
 // Output: "HELLO, WORLD!"
 ```
 
-## ?? Documentation
+## 📚 Documentation
 
-- ?? [GitHub](https://github.com/codenjwu/Runnable)
-- ?? [NuGet](https://nuget.org/packages/Runnable)
-- ?? [Full Examples](https://github.com/codenjwu/Runnable/tree/master/examples)
+- 📖 [GitHub](https://github.com/codenjwu/Runnable)
+- 📦 [NuGet](https://nuget.org/packages/Runnable)
+- 📝 [Full Examples](https://github.com/codenjwu/Runnable/tree/master/examples)
 
-## ?? Feedback Welcome!
+## 🤝 Feedback Welcome!
 
 This is my first major open-source contribution, so I'd love your feedback:
 - What do you think of the API?
@@ -356,16 +356,16 @@ This is my first major open-source contribution, so I'd love your feedback:
 
 **MIT licensed** - use it however you want!
 
-Thanks for reading! ? the repo if you find it useful!
+Thanks for reading! ⭐ the repo if you find it useful!
 ```
 
 ---
 
-## ?? Dev.to / Medium Article
+## 📝 Dev.to / Medium Article
 
 ### Title
 ```
-Building Multi-Tenant SaaS Pipelines in .NET: Introducing Runnable ??
+Building Multi-Tenant SaaS Pipelines in .NET: Introducing Runnable 🚀
 ```
 
 ### Subtitle
@@ -376,14 +376,14 @@ LangChain-inspired composable pipelines with automatic tenant isolation, context
 ### Article Outline
 
 ```markdown
-# Building Multi-Tenant SaaS Pipelines in .NET: Introducing Runnable ??
+# Building Multi-Tenant SaaS Pipelines in .NET: Introducing Runnable 🚀
 
 ## The Problem with Multi-Tenant Applications
 
 If you've ever built a multi-tenant SaaS application, you know the pain:
 
 ```csharp
-// ?? The nightmare of manual context passing
+// 😢 The nightmare of manual context passing
 public async Task<Response> ProcessRequest(
     Request request, 
     string tenantId, 
@@ -400,18 +400,18 @@ public async Task<Response> ProcessRequest(
 ```
 
 **Problems:**
-- ? Context passed manually everywhere
-- ? Easy to forget tenant filtering �� security issue!
-- ? Per-tenant caching is complex
-- ? Cross-tenant data contamination risk
-- ? Verbose, hard to maintain
+- ❌ Context passed manually everywhere
+- ❌ Easy to forget tenant filtering → security issue!
+- ❌ Per-tenant caching is complex
+- ❌ Cross-tenant data contamination risk
+- ❌ Verbose, hard to maintain
 
 ## Introducing Runnable
 
 **Runnable** is a composable pipeline library inspired by LangChain's LCEL, with first-class multi-tenancy support.
 
 ```csharp
-// ? The beautiful way
+// ✅ The beautiful way
 var result = await service
     .GetData()
     .WithTenant(request.TenantId)
@@ -422,11 +422,11 @@ var result = await service
 ```
 
 **Benefits:**
-- ? Context flows automatically
-- ? Tenant isolation enforced by type system
-- ? Per-tenant caching in one line
-- ? Clean, readable, composable
-- ? Production-ready resilience patterns
+- ✅ Context flows automatically
+- ✅ Tenant isolation enforced by type system
+- ✅ Per-tenant caching in one line
+- ✅ Clean, readable, composable
+- ✅ Production-ready resilience patterns
 
 ## How It Works
 
@@ -482,7 +482,7 @@ dataService
 
 ## Performance
 
-- Context propagation: ~1-2 ��s overhead
+- Context propagation: ~1-2 μs overhead
 - LRU cache: Bounded memory
 - Async-first: No blocking calls
 
@@ -494,19 +494,19 @@ dataService
 
 Runnable makes multi-tenant SaaS development in .NET cleaner, safer, and more maintainable.
 
-Try it today! ? the repo if you like it!
+Try it today! ⭐ the repo if you like it!
 
 ---
 
 **Links:**
-- ?? [NuGet](https://nuget.org/packages/Runnable)
-- ?? [GitHub](https://github.com/codenjwu/Runnable)
-- ?? [Discussions](https://github.com/codenjwu/Runnable/discussions)
+- 📦 [NuGet](https://nuget.org/packages/Runnable)
+- 📖 [GitHub](https://github.com/codenjwu/Runnable)
+- 💬 [Discussions](https://github.com/codenjwu/Runnable/discussions)
 ```
 
 ---
 
-## ?? YouTube Video Script (5 minutes)
+## 🎥 YouTube Video Script (5 minutes)
 
 ### Title
 ```
@@ -517,7 +517,7 @@ Runnable: Multi-Tenant Pipelines in .NET Made Easy | Open Source
 ```
 Learn how to build clean, composable multi-tenant data pipelines in .NET with Runnable - an open-source library inspired by LangChain's LCEL.
 
-?? Timestamps:
+⏱️ Timestamps:
 0:00 - The Problem
 0:45 - What is Runnable?
 1:30 - Context Propagation
@@ -526,21 +526,21 @@ Learn how to build clean, composable multi-tenant data pipelines in .NET with Ru
 4:15 - Getting Started
 4:45 - Call to Action
 
-?? Links:
-?? NuGet: https://nuget.org/packages/Runnable
-?? GitHub: https://github.com/codenjwu/Runnable
-?? Docs: [link]
+🔗 Links:
+📦 NuGet: https://nuget.org/packages/Runnable
+📖 GitHub: https://github.com/codenjwu/Runnable
+📝 Docs: [link]
 
 #dotnet #csharp #opensource #saas #multitenant
 ```
 
 ---
 
-## ?? Hacker News Post
+## 🌟 Hacker News Post
 
 ### Title
 ```
-Runnable �C Composable pipelines for .NET with first-class multi-tenancy
+Runnable – Composable pipelines for .NET with first-class multi-tenancy
 ```
 
 ### Body
@@ -577,7 +577,7 @@ GitHub: https://github.com/codenjwu/Runnable
 
 ---
 
-## ?? Email to .NET Weekly / C# Digest
+## 📧 Email to .NET Weekly / C# Digest
 
 ### Subject
 ```
@@ -621,7 +621,7 @@ Best regards,
 
 ---
 
-## ?? Visual Assets Suggestions
+## 🎨 Visual Assets Suggestions
 
 ### GitHub Social Preview (1280x640)
 
@@ -654,7 +654,7 @@ Bottom:
 
 ---
 
-## ?? Analytics Tracking
+## 📊 Analytics Tracking
 
 ### UTM Parameters for Links
 
@@ -666,7 +666,7 @@ Docs from HN: ?utm_source=hackernews&utm_medium=social&utm_campaign=launch
 
 ---
 
-## ?? Launch Checklist
+## 🎯 Launch Checklist
 
 ### Pre-Launch
 - [ ] Update README.md with final content
@@ -698,4 +698,4 @@ Docs from HN: ?utm_source=hackernews&utm_medium=social&utm_campaign=launch
 
 ---
 
-**Good luck with your launch! ??**
+**Good luck with your launch! 🚀**
