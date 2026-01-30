@@ -1,7 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <!-- NuGet Package Metadata -->
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net5.0;net6.0;net8.0;net9.0;net10.0</TargetFrameworks>
+    <PackageId>Runnable</PackageId>
+    <Version>1.0.0</Version>
+    <Title>Runnable - Composable Pipeline Library</Title>
+    <Description>A powerful, composable pipeline library for .NET inspired by LangChain's LCEL (LangChain Expression Language). Build sophisticated data processing pipelines with a clean, functional API that supports multi-tenancy, distributed tracing, caching, and resilience patterns.</Description>
+    <Authors>Runnable Contributors</Authors>
+    <PackageProjectUrl>https://github.com/yourusername/Runnable</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/yourusername/Runnable</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>pipeline;lcel;langchain;async;multi-tenant;caching;tracing;resilience;functional-programming</PackageTags>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <!-- Core Framework and Compiler Settings -->
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -19,9 +39,12 @@
   </ItemGroup>
  
   <!-- Add IAsyncEnumerable support for older frameworks -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+  <!-- Removed netstandard2.0 and net5.0 support since they have compatibility issues -->
+  
+
+  <!-- Include README in package -->
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>
-
