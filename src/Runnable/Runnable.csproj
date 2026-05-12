@@ -7,9 +7,9 @@
     <Title>Runnable - Composable Pipeline Library</Title>
     <Description>A powerful, composable pipeline library for .NET inspired by LangChain's LCEL (LangChain Expression Language). Build sophisticated data processing pipelines with a clean, functional API that supports multi-tenancy, distributed tracing, caching, and resilience patterns.</Description>
     <Authors>codenjwu</Authors>
-    <PackageProjectUrl>https://github.com/yourusername/Runnable</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/codenjwu/Runnable</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/yourusername/Runnable</RepositoryUrl>
+    <RepositoryUrl>https://github.com/codenjwu/Runnable</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>pipeline;lcel;langchain;async;multi-tenant;caching;tracing;resilience;functional-programming</PackageTags>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
@@ -17,6 +17,8 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <!-- Core Framework and Compiler Settings -->

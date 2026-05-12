@@ -1,0 +1,36 @@
+Test run for D:\Project\codenjwu\Runnable\tests\Runnable.Tests\bin\Debug\net9.0\Runnable.Tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.81]     Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_LoggingException_IsHandledSafely [FAIL]
+  Failed Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_LoggingException_IsHandledSafely [< 1 ms]
+  Error Message:
+   System.InvalidOperationException : Logger error
+  Stack Trace:
+     at Runnable.Tests.BatchingChannelConsumerTests.<>c.<<ConsumeAsync_LoggingException_IsHandledSafely>b__10_0>d.MoveNext() in D:\Project\codenjwu\Runnable\tests\Runnable.Tests\BatchingChannelConsumerTests.cs:line 368
+--- End of stack trace from previous location ---
+   at Runnable.Components.BatchingChannelConsumer`1.LogAsync(String message) in D:\Project\codenjwu\Runnable\src\Runnable\Components\BatchingChannelConsumer.cs:line 185
+   at Runnable.Components.BatchingChannelConsumer`1.CollectBatchAsync(ChannelReader`1 reader, CancellationToken cancellationToken) in D:\Project\codenjwu\Runnable\src\Runnable\Components\BatchingChannelConsumer.cs:line 228
+   at Runnable.Components.BatchingChannelConsumer`1.ConsumeInternalAsync(ChannelReader`1 reader, Func`2 batchHandler, CancellationToken cancellationToken) in D:\Project\codenjwu\Runnable\src\Runnable\Components\BatchingChannelConsumer.cs:line 165
+   at Runnable.Components.BatchingChannelConsumer`1.ConsumeAsync[TResult](ChannelReader`1 reader, BatchProcessorAsync`1 processor, CancellationToken cancellationToken) in D:\Project\codenjwu\Runnable\src\Runnable\Components\BatchingChannelConsumer.cs:line 74
+   at Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_LoggingException_IsHandledSafely() in D:\Project\codenjwu\Runnable\tests\Runnable.Tests\BatchingChannelConsumerTests.cs:line 376
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:00.96]     Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_TimeoutExpired_FlushesIncompletesBatch [FAIL]
+  Failed Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_TimeoutExpired_FlushesIncompletesBatch [< 1 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_TimeoutExpired_FlushesIncompletesBatch() in D:\Project\codenjwu\Runnable\tests\Runnable.Tests\BatchingChannelConsumerTests.cs:line 145
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:02.98]     Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_Statistics_TrackSuccessAndFailure [FAIL]
+  Failed Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_Statistics_TrackSuccessAndFailure [1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 6
+Actual:   3
+  Stack Trace:
+     at Runnable.Tests.BatchingChannelConsumerTests.ConsumeAsync_Statistics_TrackSuccessAndFailure() in D:\Project\codenjwu\Runnable\tests\Runnable.Tests\BatchingChannelConsumerTests.cs:line 451
+--- End of stack trace from previous location ---

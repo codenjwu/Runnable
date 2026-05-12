@@ -4,16 +4,16 @@ using System.Threading.Tasks;
 namespace Runnable.Examples
 {
     /// <summary>
-    /// Runnable 使用示例
+    /// Runnable Usage Examples
     /// </summary>
     public class RunnableExamples
     {
-        // 示例 1: 简单的字符串处理管道
+        // Example 1: Simple string processing pipeline
         public static void StringProcessingExample()
         {
-            Console.WriteLine("=== 字符串处理管道 ===");
+            Console.WriteLine("=== String Processing Pipeline ===");
 
-            // 创建各个处理步骤
+            // Create processing steps
             var toUpper = new Func<string, string>(s => s.ToUpper())
                 .AsRunnable();
 
@@ -27,20 +27,20 @@ namespace Runnable.Examples
                 return new string(chars);
             }).AsRunnable();
 
-            // 使用管道操作符 | 组合
+            // Use pipe operator | to compose
             var pipeline = toUpper | addPrefix | reverse;
 
-            // 执行
+            // Execute
             var result = pipeline.Invoke("hello world");
-            Console.WriteLine($"输入: hello world");
-            Console.WriteLine($"输出: {result}");
+            Console.WriteLine($"Input: hello world");
+            Console.WriteLine($"Output: {result}");
             Console.WriteLine();
         }
 
-        // 示例 2: 数值转换管道
+        // Example 2: Numeric processing pipeline
         public static void NumericProcessingExample()
         {
-            Console.WriteLine("=== 数值处理管道 ===");
+            Console.WriteLine("=== Numeric Processing Pipeline ===");
 
             var doubleNumber = new Func<int, int>(x => x * 2)
                 .AsRunnable();
@@ -48,39 +48,39 @@ namespace Runnable.Examples
             var addTen = new Func<int, int>(x => x + 10)
                 .AsRunnable();
 
-            var formatAsString = new Func<int, string>(x => $"结果: {x}")
+            var formatAsString = new Func<int, string>(x => $"Result: {x}")
                 .AsRunnable();
 
             var pipeline = doubleNumber | addTen | formatAsString;
 
             var result = pipeline.Invoke(5);
-            Console.WriteLine($"输入: 5");
-            Console.WriteLine($"处理: (5 * 2) + 10 = 20");
-            Console.WriteLine($"输出: {result}");
+            Console.WriteLine($"Input: 5");
+            Console.WriteLine($"Processing: (5 * 2) + 10 = 20");
+            Console.WriteLine($"Output: {result}");
             Console.WriteLine();
         }
 
-        // 示例 3: 异步管道
+        // Example 3: Async pipeline
         public static async Task AsyncPipelineExample()
         {
-            Console.WriteLine("=== 异步管道 ===");
+            Console.WriteLine("=== Async Pipeline ===");
 
             var fetchData = new Func<int, Task<string>>(async id =>
             {
-                await Task.Delay(500); // 模拟网络请求
-                return $"用户数据-{id}";
+                await Task.Delay(500); // Simulate network request
+                return $"User Data-{id}";
             });
 
             var processData = new Func<string, Task<string>>(async data =>
             {
                 await Task.Delay(300);
-                return $"已处理: {data}";
+                return $"Processed: {data}";
             });
 
             var saveData = new Func<string, Task<string>>(async data =>
             {
                 await Task.Delay(200);
-                return $"已保存: {data}";
+                return $"Saved: {data}";
             });
 
             var pipeline = fetchData.AsRunnable(async x => await fetchData(x))
@@ -88,14 +88,14 @@ namespace Runnable.Examples
                 | saveData.AsRunnable(async x => await saveData(x));
 
             var result = await pipeline.InvokeAsync(1);
-            Console.WriteLine($"输出: {result}");
+            Console.WriteLine($"Output: {result}");
             Console.WriteLine();
         }
 
-        // 示例 4: 批量处理
+        // Example 4: Batch processing
         public static void BatchProcessingExample()
         {
-            Console.WriteLine("=== 批量处理 ===");
+            Console.WriteLine("=== Batch Processing ===");
 
             var square = new Func<int, int>(x => x * x)
                 .AsRunnable();
@@ -108,14 +108,14 @@ namespace Runnable.Examples
             var inputs = new[] { 1, 2, 3, 4, 5 };
             var results = pipeline.Batch(inputs);
 
-            Console.WriteLine("输入: [1, 2, 3, 4, 5]");
-            Console.Write("输出: [");
+            Console.WriteLine("Input: [1, 2, 3, 4, 5]");
+            Console.Write("Output: [");
             Console.Write(string.Join(", ", results));
             Console.WriteLine("]");
             Console.WriteLine();
         }
 
-        // 示例 5: 自定义 Runnable 类
+        // Example 5: Custom Runnable class
         public class TextAnalyzer : BaseRunnable<string, int>
         {
             public override int Invoke(string input)
@@ -126,17 +126,17 @@ namespace Runnable.Examples
 
         public static void CustomRunnableExample()
         {
-            Console.WriteLine("=== 自定义 Runnable ===");
+            Console.WriteLine("=== Custom Runnable ===");
 
             var analyzer = new TextAnalyzer();
-            var format = new Func<int, string>(x => $"文本长度: {x}")
+            var format = new Func<int, string>(x => $"Text Length: {x}")
                 .AsRunnable();
 
             var pipeline = analyzer | format;
             var result = pipeline.Invoke("Hello, World!");
 
-            Console.WriteLine($"输入: Hello, World!");
-            Console.WriteLine($"输出: {result}");
+            Console.WriteLine($"Input: Hello, World!");
+            Console.WriteLine($"Output: {result}");
             Console.WriteLine();
         }
 
@@ -148,7 +148,7 @@ namespace Runnable.Examples
             BatchProcessingExample();
             CustomRunnableExample();
 
-            Console.WriteLine("所有示例执行完毕！");
+            Console.WriteLine("All examples completed!");
         }
     }
 }
